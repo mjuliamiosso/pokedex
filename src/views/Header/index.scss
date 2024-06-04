@@ -1,0 +1,47 @@
+@import '../../sass/variables';
+
+.header{
+    margin-top: 70px;
+}
+
+.header img{
+    width: 100%;
+    max-width: 550px;
+}
+
+.header-input{
+    display: flex;
+    align-items: center;
+    margin-top: 40px;
+}
+
+.header-input input{
+    height: 50px;
+    border-radius: 40px 0 0 40px;
+    border: 1px solid $light-grey;
+    background-color: $card-bg;
+    padding-left: 20px;
+    font-size: 18px;
+    font-family: "Poppins", sans-serif;
+    color: $text-color;
+}
+
+.header-input input:focus{
+    border: 1px solid $light-grey;
+    outline: none;
+}
+
+.header-input button{
+    height: 50px;
+    width: 100%;
+    border: 1px solid $light-grey;
+    border-radius: 0 40px 40px 0;
+    background-color: $card-bg;
+    color: $light-grey;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.search-btn{
+    background-color: $card-bg;
+}
