@@ -1,4 +1,4 @@
-@import '../../sass/variables';
+@import '../sass/variables';
 
 .header{
     margin-top: 70px;
@@ -6,23 +6,23 @@
 
 .header img{
     width: 100%;
-    max-width: 550px;
 }
 
 .header-input{
     display: flex;
     align-items: center;
+    justify-content: center;
     margin-top: 40px;
 }
 
 .header-input input{
     height: 50px;
+    width: 280px;
     border-radius: 40px 0 0 40px;
     border: 1px solid $light-grey;
     background-color: $card-bg;
     padding-left: 20px;
     font-size: 18px;
-    font-family: "Poppins", sans-serif;
     color: $text-color;
 }
 
@@ -40,8 +40,34 @@
     color: $light-grey;
     font-size: 20px;
     cursor: pointer;
+    width: 60px;
 }
 
 .search-btn{
     background-color: $card-bg;
+}
+
+@media (min-width: 1024px){
+    .header{
+        margin-top: 90px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .header img{
+        max-width: 600px;
+    }
+    
+    .header-input input{
+        width: 600px;
+    }
+    
+    .header-input button{
+        width: 80px;
+    }
+
+    .search-btn{
+        font-size: 25px;
+    }
 }

@@ -6,6 +6,7 @@
     margin: 0;
     box-sizing: border-box;
     background-color: $bg-color;
+    font-family: "Silkscreen", sans-serif;
 }
 
 .container{
@@ -16,5 +17,9 @@
     padding: 0 20px;
 }
 
-// font-family: "Silkscreen", sans-serif;
-// font-family: "Poppins", sans-serif;
+@media (min-width: 1024px){
+    .container{
+        max-width: 1024px;
+    }
+    
+}

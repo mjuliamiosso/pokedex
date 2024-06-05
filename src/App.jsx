@@ -1,11 +1,11 @@
 import { useState } from 'react'
-import Header from './views/Header/Header'
+import Pokedex from './views/Pokedex'
 
 function App() {
 
   return (
     <>
-      <Header></Header>
+      <Pokedex></Pokedex>
     </>
   )
 }
