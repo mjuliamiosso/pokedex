@@ -1,0 +1,9 @@
+@import '../sass/variables';
+
+.filter{
+    background-color: $card-bg;
+    color: $text-color;
+    border: 0;
+    padding: 10px;
+    cursor: pointer;
+}

@@ -1,16 +1,15 @@
 import React from 'react'
-import Pikachu from '../assets/pikachu.png'
 import './Card.scss'
 
-const Card = ({pokemonImg}) => {
+const Card = ({pokemonImage, pokemonId, pokemonName, pokemonType1, pokemonType2}) => {
   return (
-    <div className='card'>
-        <img src={Pikachu}/>
-        <p className='card-id'>Nº 0025</p>
-        <h1 className='card-name'>Pikachu</h1>
+    <div className='card pixel-corners'>
+        <img src={pokemonImage}/>
+        <p className='card-id'>{pokemonId}</p>
+        <h1 className='card-name'>{pokemonName}</h1>
         <div className='card-types'>
-          <p>Electric</p>
-          <p>Electric</p>
+          <p>{pokemonType1}</p>
+          <p>{pokemonType2}</p>
         </div>
     </div>
   )

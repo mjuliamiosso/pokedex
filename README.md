@@ -8,6 +8,7 @@
 
 * **React**
 * **Sass**
+* **Axios**
 
 ## 🔧 Ferramentas Utilizadas
 

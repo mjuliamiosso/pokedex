@@ -18,8 +18,8 @@
 .header-input input{
     height: 50px;
     width: 280px;
-    border-radius: 40px 0 0 40px;
-    border: 1px solid $light-grey;
+    border: 0;
+    border-right: 2px solid $light-grey !important;
     background-color: $card-bg;
     padding-left: 20px;
     font-size: 18px;
@@ -27,15 +27,15 @@
 }
 
 .header-input input:focus{
-    border: 1px solid $light-grey;
+    border: 0;
+    border-right: 0;
     outline: none;
 }
 
 .header-input button{
     height: 50px;
     width: 100%;
-    border: 1px solid $light-grey;
-    border-radius: 0 40px 40px 0;
+    border: 0;
     background-color: $card-bg;
     color: $light-grey;
     font-size: 20px;
@@ -45,6 +45,54 @@
 
 .search-btn{
     background-color: $card-bg;
+}
+
+
+// Filter Section
+.filter-container{
+    margin-top: 30px;
+    margin-bottom: 30px;
+    
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+}
+
+// Card Section
+.card-container{
+    display: grid;
+    gap: 20px;
+    margin-bottom: 70px;
+}
+
+.card-btn{
+    width: 205px;
+    height: 50px;
+    background-color: $blue;
+    color: $card-bg;
+    font-size: 20px;
+    border: 0;
+    margin-bottom: 80px;
+    cursor: pointer;
+}
+
+.card-box{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+// Footer
+footer {
+    background-color: $blue;
+    
+}
+footer p{
+    text-align: center;
+    color: #fff;
+    padding-top: 30px;
+    padding-bottom: 30px;
 }
 
 @media (min-width: 1024px){
@@ -69,5 +117,58 @@
 
     .search-btn{
         font-size: 25px;
+    }
+
+    // Card Section
+    .card-container{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        gap: 20px;
+    }
+
+    .card-btn{
+        width: 250px;
+        height: 50px;
+    }
+
+    // Footer
+    footer p{
+        text-align: end;
+    }
+}
+
+@media (min-width: 1440px){
+    .header{
+        margin-top: 90px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .header img{
+        max-width: 600px;
+    }
+    
+    .header-input input{
+        width: 600px;
+    }
+    
+    .header-input button{
+        width: 80px;
+    }
+
+    .search-btn{
+        font-size: 25px;
+    }
+
+    // Card Section
+    .card-container{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        gap: 20px;
+    }
+
+    .card-btn:hover{
+        transform: translateY(-7px);
     }
 }
