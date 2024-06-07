@@ -1,15 +1,22 @@
 import React from 'react'
 import './Card.scss'
 
-const Card = ({pokemonImage, pokemonId, pokemonName, pokemonType1, pokemonType2}) => {
+const Card = ({image, id, name, types}) => {
+  const typeHandler = ( ) => {
+    if(types[1]) {
+      return types[1].type.name
+    }
+    return ''
+  }
+
   return (
     <div className='card pixel-corners'>
-        <img src={pokemonImage}/>
-        <p className='card-id'>{pokemonId}</p>
-        <h1 className='card-name'>{pokemonName}</h1>
+        <img src={image}/>
+        <p className='card-id'>Nº {id}</p>
+        <h1 className='card-name'>{name}</h1>
         <div className='card-types'>
-          <p>{pokemonType1}</p>
-          <p>{pokemonType2}</p>
+          <p>{types[0].type.name}</p>
+          <p>{typeHandler()}</p>
         </div>
     </div>
   )
