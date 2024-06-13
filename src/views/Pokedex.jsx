@@ -5,6 +5,7 @@ import PokemonImg from '../assets/pokemon-logo.svg'
 import Card from '../components/Card'
 import Filter from '../components/Filter'
 import axios from 'axios'
+import Skeleton from '../components/Skeleton';
 
 
 const Header = () => {
@@ -17,7 +18,7 @@ const Header = () => {
     //API
   const getPokemons = () => {
     var endpoints = []
-    for(var i=1; i < 151; i++){
+    for(var i=1; i < 1026; i++){
       endpoints.push(`https://pokeapi.co/api/v2/pokemon/${i}/`)
     }
     axios.all(endpoints.map((endpoint) => axios.get(endpoint))).then((res)=> setPokemons(res))
@@ -68,11 +69,13 @@ const Header = () => {
       </section>
       <section className='card-box container'>
         <div className='card-container' >
-          {pokemons.map((pokemon) => (
-            <Card image={pokemon.data.sprites.front_default} id={pokemon.data.id} name={pokemon.data.name} types={pokemon.data.types}></Card>
-          ))}
+           {pokemons.length === 0 ?<Skeleton/> :
+            pokemons.map((pokemon) => (
+              <Card image={pokemon.data.sprites.front_default} id={pokemon.data.id} name={pokemon.data.name} types={pokemon.data.types}></Card>
+            ))
+          }
         </div>
-        <button className='card-btn pixel-corners'>Ver mais</button>
+
       </section>
       <footer>
         <div className='container'>
