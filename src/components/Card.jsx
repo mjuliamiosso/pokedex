@@ -6,7 +6,7 @@ const Card = ({image, id, name, types}) => {
     if(types[1]) {
       return types[1].type.name
     }
-    return ''
+    return 
   }
 
   return (

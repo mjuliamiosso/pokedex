@@ -3,12 +3,33 @@ import './index.scss'
 import { IoSearchSharp } from "react-icons/io5";
 import PokemonImg from '../assets/pokemon-logo.svg'
 import Card from '../components/Card'
-import Filter from '../components/Filter'
 import axios from 'axios'
 import Skeleton from '../components/Skeleton';
+// import Filter from '../components/Filter'
 
 
 const Header = () => {
+  const colors = {
+    bug: "#5F8359",
+    dark: "#808080",
+    dragon: "linear-gradient(180deg, rgba(91,163,229,1) 0%, rgba(229,80,80,1) 100%)",
+    electric: "#F2C85D",
+    fairy: "#FCA1B1",
+    fighting: "#BE6423",
+    fire: "#F98544",
+    flying: "linear-gradient(180deg, rgba(68,168,225,1) 0%, rgba(175,175,175,1) 100%)",
+    ghost: "#8761A5",
+    grass: "#8BCB75",
+    ground: "linear-gradient(180deg, rgba(241,192,65,1) 0%, rgba(119,95,48,1) 100%);",
+    ice: "#4EC3E8",
+    normal: "#C8C8C8",
+    poison: "#C690D9",
+    psyquic: "#FF78C1",
+    rock: "#AE8B46",
+    steel: "#B0B9C8",
+    water: "#5596E2"
+  }
+
   const [pokemons, setPokemons] = useState([])
 
   useEffect(() => {
