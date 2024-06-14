@@ -7,8 +7,8 @@ const Skeleton = () => {
     <div className='skeleton pixel-corners'>
         <div>
             <img src={GreyBlock} alt="" />
-            <p className='card-id'>Nº</p>
-            <h1 className='card-name'>Loading</h1>
+            <p className='card-id'>Nº ---</p>
+            <h1 className='card-name'>---</h1>
             <div className='card-types'>
                 <p>---</p>
                 <p>---</p>

@@ -43,11 +43,10 @@ const Header = () => {
         <img src={PokemonImg} alt="pokemon-logo" />
         <div className='header-input pixel-corners'>
             <input onChange={(e) => pokemonSearch(e.target.value)} type="text" placeholder='Search...'/>
-            <button><IoSearchSharp className='search-btn' /></button>
+            <span><IoSearchSharp className='search-btn' /></span>
         </div>
       </header>
-      <section className='filter-container container'>
-        <Filter name={"All"}></Filter>
+      {/* <section className='filter-container container'>
         <Filter name={"Bug"}></Filter>
         <Filter name={"Dark"}></Filter>
         <Filter name={"Dragon"}></Filter>
@@ -66,7 +65,7 @@ const Header = () => {
         <Filter name={"Rock"}></Filter>
         <Filter name={"Steel"}></Filter>
         <Filter name={"Water"}></Filter>
-      </section>
+      </section> */}
       <section className='card-box container'>
         <div className='card-container' >
            {pokemons.length === 0 ?<Skeleton/> :
